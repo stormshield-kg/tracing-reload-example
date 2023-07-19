@@ -1,0 +1,17 @@
+[package]
+name = "tracing-reload-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+arc-swap = "1.6.0"
+eyre = "0.6.8"
+indexmap = { version = "2.0", features = ["serde"] }
+serde = { version = "1.0.171", features = ["derive"] }
+toml = { version = "0.7.6", features = ["preserve_order"] }
+tracing = { git = "https://github.com/stormshield-kg/tracing.git", branch = "reloadable-filtered-master" }
+tracing-appender = { git = "https://github.com/stormshield-kg/tracing.git", branch = "reloadable-filtered-master" }
+tracing-log = { git = "https://github.com/stormshield-kg/tracing.git", branch = "reloadable-filtered-master" }
+tracing-subscriber = { git = "https://github.com/stormshield-kg/tracing.git", branch = "reloadable-filtered-master", features = [
+    "env-filter",
+] }
